@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\ItemsController;
 
 
 /*
@@ -28,3 +29,5 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/user',                 'index');
     Route::delete('/user/{id}',         'destroy');
 });
+
+Route::get('/Items', [ItemsController::class, 'index']);
